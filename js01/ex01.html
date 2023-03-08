@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ex01</title>
+
+    <style>
+        body {
+            background-color: rgb(105, 105, 173);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        h1, h2, h3 {
+            color: rgb(255, 212, 22);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Js exercicio 02</h1>
+    <p>Exercicio 02</p>
+
+    <h2>OBS</h2>
+    <h3>conversao de numeros primitivos</h3>
+    <ol type="I">
+        <li>Number.parselnt(n)</li>
+        <p>Converte de um numero para um numero inteiro</p>
+        <li>Number.parseFloat(n)</li>
+        <p>Caso eu quera converter para um numero real (com virgula.)</p>
+        <li>Number(n)</li>
+        <p>forma nova de converter qualquer tipo primitivo</p>
+        <h3>conversao string</h3>
+        <li>String(n)</li>
+        <p>converte um numero para uma string</p>
+        <li>n.toString()</li>
+        <p>obs: "n" e o que vc quer alterar</p>
+        <li>s.lenght</li>
+        <p>quantos caracteres a string tem</p>
+        <li>s.toUpperCasa()</li>
+        <p>tudo para MAIUSCULO</p>
+        <li>to.LowerCase()</li>
+        <p>Tudo para minusculas</p>
+    </ol>
+
+    <h2>a forma de exibir uma variavel, pode usar a concatenacao ou usar o template string</h2>
+    <strong>
+        <p>ex: 'eu estou aprendendo s' NAO faz interpolacao. nao vaia aparecer minha variavel s e sim a string s</p>
+        <p>ex: 'eu estou aprendendno ' + s USA concatenacao para mostrar o valor da variavel</p>
+        <p>ex: `eu estou aprendendo ${s}` ESSA forma usa o template string, que coloca o cifrao e a variavel entre chaves, e ao inves de ficar entre parenteses, ele fica entre crases. Obs: o cifrao seguido de chaves chamamos de placeholder</p>
+    </strong>
+
+    <script>
+        var nome = window.prompt('Type your name');
+        window.alert('nice to meet you, ' + nome + '!') // Concatenacao
+
+        var n1 = window.prompt('Type the first number:');
+        var n2 = window.prompt('Type the second number:');
+        window.alert('seu primeiro numero foi ' + n1 + ' e o segundo foi o ' + n2); // Concatenacao
+
+        var n3 = Number.parseInt(window.prompt('type the first number: ')); // Concatenacao
+        var n4 = Number.parseInt(window.prompt('type the second number')); // Concatenacao
+        var soma = n3 + n4
+        window.alert(`A soma dos dois numeros e igual a ${soma}`); // Template string
+
+        window.alert('usando lenght');
+
+        var nome3 = window.prompt('Qual seu nome?');
+        document.write(`Seu nome tem ${nome3.length} letras. <br/>`) // document.write escreve na tela e lenght mostra a quantidade de letras no nome
+        document.write(`Seu nome em maiusculo ${nome3.toUpperCase()} <br/>`);
+        document.write(`Seu nome minusculo ${nome3.toLowerCase()}`);
+    </script>
+</body>
+</html>
