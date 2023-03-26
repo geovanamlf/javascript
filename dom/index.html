@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+        .arvoreDom {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando com DOM</h1>
+
+    <p>DOM > <strong>Document Object Model</strong></p>
+    <img src="arvore-dom.png" class="arvoreDom">
+    
+    <p>E uma representação hierárquica em forma de árvore de todos os elementos HTML de uma página da web. Basicamente, quando você acessa um     site, seu navegador cria uma árvore DOM para organizar todos os elementos da página, como imagens, texto, links, botões e outros elementos HTML. Essa árvore permite que o navegador interprete e renderize a página corretamente. Cada nó na árvore representa um elemento HTML, e cada nó pode ter filhos (outros elementos HTML aninhados dentro dele) e irmãos (outros elementos HTML no mesmo nível hierárquico). A árvore DOM pode ser acessada e manipulada usando JavaScript, permitindo que os desenvolvedores alterem dinamicamente a aparência e o comportamento da página.</p>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div>Clique em mim</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]
+
+         window.document.write(p1.innerText)
+    </script>
+</body>
+</html>
