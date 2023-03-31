@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Demon-Slayer-Logo.png" type="image/x-icon">
+    <title>Perfil</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, rgba(252, 160, 175, 0.904), rgba(123, 255, 0, 0.336), rgba(128, 0, 128, 0.575));
+            font: Arial 20pt;
+        }
+
+        #escreva {
+            background-color: rgba(240, 248, 255, 0.822);
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Profile</h1>
+        <div id="escreva"></div>
+    </main>
+
+    <script>
+        window.alert('Seu perfil!')
+        var nome = window.prompt('Digite seu nome: ')
+        var idade = window.prompt(`Ok, ${nome}! Agora, digite a sua idade: `)
+        var profissao = window.prompt('Agora, digite sua profissao: ')
+
+        if(idade >= 18) {
+            escreva.innerHTML = `Voce tem ${idade} anos, portanto e maior de idade!`
+        }else {
+            escreva.innerHTML = `Voce tem ${idade} anos, portanto e menor de idade!`
+        }
+
+        if(profissao == 'programadora'){
+            var codar = window.prompt(`Ja que voce e programador, digite a linguagem que voce coda:`)
+            escreva.innerHTML += `<p>Voce e ${profissao} e coda em ${codar}</p>`
+        }else {
+            window.alert('Sugiro que comece a estudar programacao!')
+        }
+        escreva.innerHTML += `<p>Seu nome e ${nome}, voce tem ${idade}, e sua profissao e ${profissao}</p>`
+    </script>
+</body>
+</html>

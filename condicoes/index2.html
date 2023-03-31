@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificacao de nacionalidade</title>
+
+    <style>
+        body {
+            background-image: linear-gradient(to left, rgba(253, 107, 241, 0.692),  rgb(162, 216, 235));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            border: 1px solid black;
+            width: 500px;
+            height: 400px;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Nacionalidades</h1>
+        Em que pais voce nasceu? <input type="text" name="txtnac" id="txtnac">
+        <input type="button" value="Enviar" onclick="descobrirNacionalidade()">
+        <div id="esNac"></div>
+    </main>
+
+    <script>
+        function descobrirNacionalidade(){
+            var nacionalidade = window.document.getElementById('txtnac')
+            var esNac  = window.document.getElementById('esNac')
+            var nac = String(nacionalidade.value)
+            esNac.innerHTML = `<p>Voce nasceu em ${nac}, portanto,<p>`
+
+            if(nac == 'Brasil') {
+            esNac.innerHTML += `<p>Voce e Brasileiro(a)!</p>`
+            } else {
+                esNac.innerHTML += `<p>Voce e estrangeiro!</p>`
+            }
+        }
+    </script>
+</body>
+</html>
