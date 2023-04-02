@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicoes - all </title>
+
+    <style>
+        body {
+            background-color: rgba(255, 192, 203, 0.719); 
+        }
+
+        h1, h2 {
+            color: darkgreen;
+        }
+
+        p {
+            font-weight: bolder;
+            font-size: 21px;
+        }
+
+        pre {
+            font-weight: bolder;
+            font-size: 15px;
+            color: rgb(116, 0, 116);
+        }
+
+        span {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tudo que aprendi ate agora sobre condicoes</h1>
+    <p>Condicoes simples, compostas e multiplas.</p>
+    <h2>Simples</h2>
+    <pre>
+        var vel = 60
+        console.log(`A velocidade do seu carro e de ${vel}Km/h`)
+        
+        <span><span>if</span></span>(vel > 60) { // Condicao simples
+            console.log('Voce ultrapassou os limites permitidos.')
+        }
+        console.log('Sempre ultilize o cinto de seguranca!')
+    </pre>
+    <p>Quando ou faz uma coisa, ou faz outra.</p>
+    <h2>Composta</h2>
+    <pre>
+        var pais = 'Brasil'
+        console.log(`Vivendo em ${pais}`)
+        
+        <span>if</span> (pais == 'Brasil') { // Condicao composta
+            console.log('Voce e Brasileiro(a)')
+        } <span>else</span> {
+            console.log('Voce e estrangeiro')
+        }
+    </pre>
+    <p>Quando tenho mais de uma condicao.</p>
+    <h2>Multiplas</h2>
+    <pre>
+        var agora = new Date()
+        var hora = agora.getHours()  
+        console.log(`Agora sao exatamente ${hora} horas.`)
+        
+        <span>if</span>(hora < 12) { // Se hora for menor que doze, entao:
+            console.log('Bom dia!')
+        } <span>else if</span>(hora <= 18) { // Se hora for menor ou igual a dezoito, entao:
+            console.log('Boa tarde!')
+        } <span>else</span> { // Senao:
+            console.log('Boa noite!')
+        }
+    </pre>
+    <p>Condicoes aninhadas, que fazem varias condicoes e tem varios caminhos.</p>
+    <h2>Condicao case</h2>
+    <pre>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        console.log(diaSem)
+        
+        switch(diaSem) { // Util em situacoes pontuais.
+            <span>case 0:</span>
+                console.log('Domingo')
+                break
+            <span>case 1:</span>
+                console.log('Segunda')
+                break
+            <span>case 2:</span>
+                console.log('Terca')
+                break
+            <span>case 3:</span>
+               console.log('Quarta')
+                break
+            <span>case 4:</span>
+                console.log('Quinta')
+                break
+            <span>case 5:</span>
+                console.log('Sexta')
+                break
+            <span>case 6:</span>
+                console.log('Sabado') 
+                break
+            default:
+                console.log(`[ERRO]invalido`)
+        }</pre>
+    <p>Usada para trabalhar com valores fixos, sem intervalos</p>
+</body>
+</html>
